@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=“vi”>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset=“UTF-8">
+    <title>Ví dụ onchange</title>
 </head>
 <body>
-$END$
+<h3>Chọn ngôn ngữ lập trình bạn yêu thích:</h3>
+<select id=“languageSelect” onchange="showSelectedLanguage()">
+    <option value="">-- Chọn một ngôn ngữ --</option>
+    <option value=“javascript”>JavaScript</option>
+    <option value=“python”>Python</option>
+    <option value=“java”>Java</option>
+    <option value=“csharp”>C#</option>
+</select>
+<p id=“result”></p>
+<script>
+    function showSelectedLanguage() {
+        // Lấy phần tử select
+        const selectElement = document.getElementById("languageSelect");
+        // Lấy giá trị được chọn
+        const selectedValue = selectElement.value;
+        // Hiển thị kết quả
+        const result = document.getElementById("result");
+        if (selectedValue) {
+            result.textContent = "Bạn đã chọn: " + selectedValue;
+        } else {
+            result.textContent = "Bạn chưa chọn ngôn ngữ nào.";
+        }
+    }
+</script>
 </body>
 </html>

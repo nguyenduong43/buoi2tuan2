@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+     <form>
+          <input type="text" id="tiente" placeholder="nhap so tien can doi">
+         <select id="a1">
+             <option value="vnd">vnd</option>
+             <option value="usd" >usd</option>
+         </select>
+         <select id="a2">
+             <option value="vnd">vnd</option>
+             <option value="usd" >usd</option>
+         </select>
+         <button type="button" onclick="doitien()" >doi tien</button>
+         <p id="ketqua"></p>
+     </form>
 </body>
 </html>
+<script>
+    function doitien() {
+        let inputtien = document.getElementById("tiente").value;
+        let tien = parseInt(inputtien);
+
+
+        var e = document.getElementById("a1");
+        var value = e.value;
+        var text = e.options[e.selectedIndex].text;
+
+        var e1=document.getElementById("a2");
+        var value1= e1.value;
+        var text1=e1.options[e1.selectedIndex].text;
+        if (text==text1) document.getElementById("ketqua").innerHTML="tien doi dc la "+tien+" "+text1;
+          else if (text=='vnd') document.getElementById("ketqua").innerHTML="tien doi dc la "+tien/23000+" "+text1;
+          else document.getElementById("ketqua").innerHTML="tien doi dc la "+tien*23000+" "+text1;
+    }
+
+</script>

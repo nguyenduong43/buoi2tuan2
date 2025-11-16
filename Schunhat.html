@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+     <button type="button" onclick="hcn()">click me</button>
+<hr>
+     <button type="button" onclick="hcn1()">click me</button>
+<hr>
+<button type="button" onclick="boi()">click me</button>
 </body>
 </html>
+<script>
+    function hcn()
+    {
+        let width=20;
+        let height=10;
+        let S=width*height;
+        document.write("dien tich hcn la :"+S);
+    }
+    function hcn1()
+    {
+        let inputwidth;
+        let inputheight;
+        inputwidth=prompt("chieu dai hcn la ");
+        inputheight=prompt("chieu rong hcn la ");
+        let width1=parseInt(inputwidth);
+        let height1=parseInt(inputheight);
+        let S=width1*height1;
+        document.write("dien tich hcn la :"+S);
+    }
+    function boi()
+    {
+        let inputa=prompt("nhap a=");
+        let inputb=prompt("nhap b=");
+        let a=parseInt(inputa);
+        let b=parseInt(inputb);
+        if (a%b==0) document.write("a la boi cua b");
+        else document.write("a khong la boi cua b");
+    }
+</script>

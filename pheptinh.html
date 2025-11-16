@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+     <input type="text" id="so1" placeholder="nhap so thu nhat...">
+     <input type="text" id="so2" placeholder="nhap so thu hai...">
+     <br><br>
+     <button type="button" value="+" onclick="tinh(this)" style="width:83px;">Cong(+)</button>
+          <button type="button" value="-" onclick="tinh(this)" style="width:83px;">Tru(-)</button>
+        <button type="button" value="*" onclick="tinh(this )" style="width:82px;">Nhan(*)</button>
+          <button type="button" value="/" onclick="tinh(this)" style="width:82px;">Chia(/)</button>
+     <br>
+     Ket qua la : <p id="ketqua"></p>
 </body>
 </html>
+<script>
+    function tinh(btn)
+    {
+        let input1 = document.getElementById("so1").value;
+        let so1 = parseInt(input1);
+        let input2 = document.getElementById("so2").value;
+        let so2 = parseInt(input2);let kq;
+        switch (btn.value) {
+            case "+":kq=so1+so2;break;
+            case "-":kq=so1-so2;break;
+            case "*":kq=so1*so2;break;
+            case "/":kq=so1/so2;break;
+        }
+        document.getElementById("ketqua").innerHTML = kq;
+    }
+</script>

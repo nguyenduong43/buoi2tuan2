@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button type="button" onclick="tbc()">tinh tbc a,b,c</button>
+<hr>
+<input type="text" id="doC" placeholder="nhap do C">
+<button type="button" onclick="nhietdo()">doi sang F</button>
+<p id="ketqua"></p>
+<hr>
+<input type="text" id="bankinh" placeholder="nhap ban kinh r ..">
+<button type="button" onclick="Shinhtron()">tinh S va C hinh tron</button>
+<p id="ketqua1"></p>
 </body>
 </html>
+<script>
+    function tbc() {
+        let inputtoan;
+        let inputhoa;
+        let inputly;
+         inputtoan = prompt("nhap diem toan");
+         inputly = prompt("nhap diem ly");
+         inputhoa = prompt("nhap diem hoa");
+        let toan = parseInt(inputtoan);
+        let ly = parseInt(inputly);
+        let hoa = parseInt(inputhoa);
+        let tbc = (toan + ly + hoa) ;
+        document.write("trung binh cong 3 mon la " + tbc/3+" tong 3 mon la "+tbc);
+    }
+    function nhietdo(){
+        //let inputC=prompt("nhap do C");
+        let inputC=document.getElementById("doC").value;
+        let C=parseInt(inputC);
+        let F=(C*9)/5+32;
+        document.getElementById("ketqua").innerHTML=C+" do C="+F+" do F";
+    }
+    function Shinhtron()
+    {
+        let inputr=document.getElementById("bankinh").value;
+        r=parseInt(inputr);
+        let S=r*r*3.14;
+        let C=2*r*3.14;
+        document.getElementById("ketqua1").innerHTML="dien tich hinh tron la "+S+ " chu vi hinh tron la "+C;
+    }
+</script>
